@@ -12,6 +12,9 @@ mongoose.connect('mongodb://localhost:27017/dhakaboss', {
 mongoose.connection.on('connected', () => {
     console.log('MongoDB connected')
 })
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 
 
 const app = express()
